@@ -1,15 +1,11 @@
 import React from 'react'
 import Menu from '../Component/Menu/Menu'
+import Homepage from '../Component/Homepage/Homepage'
 
 const Home = () => {
   return (
-    <div className="mt-12 flex justify-center flex-col items-center font-Figtree">
-        <div>
-            missing Image
-        </div>
-        <div className="mt-6 font-medium text-3xl">
-        Discover the Art of Culinary Creations
-        </div>
+    <div className="flex justify-center flex-col items-center font-Figtree">
+        <Homepage/>
         <Menu/>
     </div>
   )

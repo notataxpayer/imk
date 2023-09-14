@@ -8,7 +8,7 @@ import err404 from './Pages/err404'
 
 const App = () => {
   return (
-    <div>
+    <div className="">
       <Nav />
       <BrowserRouter>
         <Routes>
