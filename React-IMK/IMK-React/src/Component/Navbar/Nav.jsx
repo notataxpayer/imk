@@ -1,6 +1,7 @@
-import React from 'react'
-import About from '../../Pages/About';
-import Home from '../../Pages/Home';
+import About from "../../Pages/About";
+import Home from "../../Pages/Home";
+import Faq from "../../Pages/Faq";
+import React from "react";
 import {
   Navbar,
   MobileNav,
@@ -9,17 +10,16 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 
-
 const Nav = () => {
   const [openNav, setOpenNav] = React.useState(false);
- 
+
   React.useEffect(() => {
     window.addEventListener(
       "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false),
+      () => window.innerWidth >= 960 && setOpenNav(false)
     );
   }, []);
- 
+
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography
@@ -28,7 +28,10 @@ const Nav = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="Home" className="flex items-center">
+        <a
+          href="Home"
+          className="flex items-center font-extrabold font-Poppins"
+        >
           Home
         </a>
       </Typography>
@@ -38,7 +41,7 @@ const Nav = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a href="#" className="flex items-center font-extrabold font-Poppins">
           Menu
         </a>
       </Typography>
@@ -48,7 +51,10 @@ const Nav = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="About" className="flex items-center">
+        <a
+          href="About"
+          className="flex items-center font-extrabold font-Poppins"
+        >
           About Us
         </a>
       </Typography>
@@ -58,21 +64,31 @@ const Nav = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a href="#" className="flex items-center font-extrabold font-Poppins">
           Contact
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <a href="Faq" className="flex items-center font-extrabold font-Poppins">
+          FAQ
         </a>
       </Typography>
     </ul>
   );
   return (
-    <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4">
+    <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4 bg-green-light border-none">
       <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
           href="#"
-          className="mr-4 cursor-pointer py-1.5 font-bold text-orange-500 "
+          className="mr-4 cursor-pointer py-1.5 font-bold text-black "
         >
-          Simpl & Shotz
+          SIMPLSHOTZ
         </Typography>
         <div className="hidden lg:block">{navList}</div>
         <Button variant="gradient" size="sm" className="hidden lg:inline-block">
@@ -125,7 +141,7 @@ const Nav = () => {
         </div>
       </MobileNav>
     </Navbar>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;
